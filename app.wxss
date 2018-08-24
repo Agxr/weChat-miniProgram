@@ -1,0 +1,29 @@
+/**app.wxss**/
+view, text {
+  font-family: Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+  color: #333;
+}
+/* flex */
+.flex-box {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.flex-around {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column-box {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+}
