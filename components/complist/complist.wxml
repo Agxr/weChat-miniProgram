@@ -1,0 +1,20 @@
+<!-- index:hotCommon -->
+<template name="hotCommon">
+  <view wx:for="{{hotCommonArr}}" class="complate-hot-commons" wx:key="{{index}}">
+    <view class="user-box flex-between">
+      <view class="user-info flex-box">
+        <image src="{{item.header}}"></image>
+        <text>{{item.username}}</text>
+      </view>
+      <view class="top-date">{{item.passtime}}</view>
+    </view>
+    <view class="common-cont" catchtap="goCommonDetail">
+      <view wx:if="item.text" class="common-text">
+        <text>{{item.text}}</text>
+      </view>
+      <view wx:if="item.thumbnail" class="common-img" mode="aspectFit">
+        <image src="{{item.thumbnail}}"></image>
+      </view>
+    </view>
+  </view>
+</template>

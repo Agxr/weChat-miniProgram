@@ -2,6 +2,10 @@
 <view class="box">
   <view class="hot-commons-box">
     <view class="hot-commons-title">热门评论</view>
+    <view class="hot-commons-obj">
+      <import src="../../components/complist/complist.wxml" />
+      <template is="hotCommon" data="{{hotCommonArr}}"></template>
+    </view>
   </view>
   <!-- userinfo-box -->
   <view class="userinfo-box" wx:if="{{hasWxUserInfo}}" bindtap='goMyInfoEvn'>

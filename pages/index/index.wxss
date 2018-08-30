@@ -1,6 +1,25 @@
 /**index.wxss**/
-
-
+.hot-commons-title {
+  font-size: 28rpx;
+  padding: 10rpx 0 10rpx 36rpx;
+  background-color: #fff;
+  position: relative;
+}
+.hot-commons-title::after {
+  position: absolute;
+  top: 24rpx;
+  left: 20rpx;
+  content: '';
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #36037C;
+  border-radius: 50%;
+}
+@import "../../components/complist/complist.wxss";
+.hot-commons-obj {
+  padding: 0 20rpx;
+  background-color: #fff;
+}
 /* userinfo-box */
 .userinfo-box {
   position: fixed;

@@ -1,0 +1,31 @@
+.complate-hot-commons {
+  padding: 10rpx 20rpx;
+  border: 1px solid #dbdbdb;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+.user-box {
+  height: 80rpx;
+}
+.user-info image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.user-info text {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.top-date {
+  font-size: 24rpx;
+  color: #666;
+}
+.common-cont {
+  width: 100%;
+}
+.common-text text {
+  font-size: 32rpx;
+}
+.common-img image {
+  width: 100%;
+}
