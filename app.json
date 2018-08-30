@@ -2,13 +2,16 @@
   "pages":[
     "pages/index/index",
     "pages/like/like",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/authwxinfo/authwxinfo",
+    "pages/myinfo/myinfo"
   ],
   "window":{
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#36037C",
     "navigationBarTitleText": "林下夕影",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "#fff",
+    "onReachBottomDistance": 10
   },
   "tabBar": {
     "color": "#333",

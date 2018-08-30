@@ -1,0 +1,33 @@
+<view class="box">
+  <view class="item first-item flex-between">
+    <text class="item-key">头像</text>
+    <image class="item-user-img" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="item flex-between">
+    <text class="item-key">昵称</text>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <!-- <view class="item flex-between">
+    <text class="item-key">手机</text>
+    <view class="item-value-phone">
+      <text>{{userPhone}}</text>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{!hasUserPhone}}" class="item-user-phone">认证手机</button>
+    </view>
+  </view> -->
+  <view class="item flex-between">
+    <text class="item-key">性别</text>
+    <text>{{userInfo.gender == 0 ? '未设置' : (userInfo.gender == 1 ? '男' : '女')}}</text>
+  </view>
+  <view class="item flex-between">
+    <text class="item-key">城市</text>
+    <text>{{userInfo.city ? userInfo.city : '未设置'}}</text>
+  </view>
+  <view class="item flex-between">
+    <text class="item-key">帮助热线</text>
+    <image class="item-value-call" catchtap="calling" src="/images/tellIcon.png"></image>
+  </view>
+  <view class="item flex-between">
+    <text class="item-key">QQ交流群</text>
+    <text selectable="true">50790353</text>
+  </view>
+</view>

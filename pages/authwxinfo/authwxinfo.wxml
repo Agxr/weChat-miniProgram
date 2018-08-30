@@ -1,0 +1,9 @@
+<view class="box">
+  <view class="welcome-box">
+    <image class="welcome-img" src="http://i68.tinypic.com/2v0zc7q.jpg" ></image>
+  </view>
+  <view class="btn-box flex-around">
+    <button bindtap="goBackEvn" size='26'> 返回首页 </button>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" size='26' type='primary'> 获取头像昵称 </button>
+  </view>
+</view>

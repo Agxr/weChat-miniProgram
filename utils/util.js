@@ -14,6 +14,14 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const goBack = len => { // 路由跳转，后退
+  let newLen = len ? len : 1;
+  wx.navigateBack({
+    delta: newLen
+  })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  goBack: goBack
 }
