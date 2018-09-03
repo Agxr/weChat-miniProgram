@@ -1,0 +1,11 @@
+<view class="box">
+  <view class="like-title">美图欣赏</view>
+  <view class="like-cont flex-around">
+    <import src="../../components/complist/complist.wxml" />
+    <template is="likeMeitu" data="{{hotMeituArr}}"></template>
+  </view>
+  <view class="like-auth flex-column-box" wx:if="{{!hasWxUserInfo}}">
+    <image src="../../images/hello.jpg" mode="widthFix"></image>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" size='26' type='primary'> 获取头像昵称 </button>
+  </view>
+</view>

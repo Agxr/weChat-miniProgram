@@ -1,0 +1,33 @@
+<view class="box">
+  <view class="my-box">
+    <image src="../../images/backImg.jpg" class="back-img"></image>
+    <view wx:if="{{hasWxUserInfo}}" class="userinfo-box flex-column-box">
+      <image src="{{userInfo.avatarUrl}}" catchtap='goMyInfoEvn' class="user-img"></image>
+      <text class="user-name">{{userInfo.nickName}}</text>
+    </view>
+    <view wx:else class="userinfo-box flex-column-box">
+      <image src="../../images/myIcon.png" class="user-img"></image>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" size='26' type='primary' class="user-auth-btn"> 授权信息 </button>
+    </view>
+  </view>
+  <view class="news-box">
+    <view class="news-tab flex-around">
+      <text class="news-tab-item {{selTabIndex == 'tech' ? 'news-tab-item-on' : ''}}" catchtap="selTabType" data-type="tech">科技</text>
+      <text class="news-tab-item {{selTabIndex == 'auto' ? 'news-tab-item-on' : ''}}" catchtap="selTabType" data-type="auto">汽车</text>
+      <text class="news-tab-item {{selTabIndex == 'money' ? 'news-tab-item-on' : ''}}" catchtap="selTabType" data-type="money">财经</text>
+      <text class="news-tab-item {{selTabIndex == 'sports' ? 'news-tab-item-on' : ''}}" catchtap="selTabType" data-type="sports">体育</text>
+      <text class="news-tab-item {{selTabIndex == 'toutiao' ? 'news-tab-item-on' : ''}}" catchtap="selTabType" data-type="toutiao">头条</text>
+    </view>
+    <view class="news-cont" wx:if="{{newsArrSel.length}}">
+      <import src="../../components/complist/complist.wxml" />
+      <template is="newsCont" data="{{newsArrSel, selTabIndex}}"></template>
+    </view>
+  </view>
+  <view class="news-fixed" wx:if="{{newsLinkFlag}}">
+    <view class="news-fixed-cont flex-column-box">
+      <text class="news-fixed-text">如想查看新闻详情，长按后面网址链接到浏览器里面输入网址打开即可：<text selectable="true" class="news-fixed-link">{{newsLinkStr}}</text></text>
+      <text class="newx-fixed-btn" catchtap="hideNewsFixed">确定</text>
+    </view>
+  </view>
+  <!-- <web-view src="https://www.baidu.com/"></web-view> -->
+</view>

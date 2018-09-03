@@ -24,9 +24,6 @@ const wxRequest = (params, url) => {
     complete(res) {
       if (params.complete) {
         params.complete(res);
-        setTimeout(function () {
-          wx.hideLoading()
-        }, 3000)
       }
     },
   });
@@ -41,7 +38,12 @@ const satinGodApi = (params) => {  // url/satinGodApi?type=1&page=1
 const satinCommentApi = (params) => { // 随机推荐热门段子【神评版本】评论列表satinCommentApi?id=27610708&page=1
   wxRequest(params, `${apiUrl}/satinCommentApi`)
 };
-
+const meituApi = (params) => { // https://www.apiopen.top/meituApi?page=1
+  wxRequest(params, `${apiUrl}/meituApi`)
+}
+const newsAPi = (params) => { // 新闻接口: journalismApi
+  wxRequest(params, `${apiUrl}/journalismApi`)
+}
 
 module.exports = {
 // 随机推荐热门段子（包含文字、图片、GIF、视频）
@@ -49,6 +51,9 @@ module.exports = {
 // 随机推荐热门段子【神评版本】（包含文字、图片、GIF、视频）
   satinGodApi,
 // 随机推荐热门段子【神评版本】评论列表-->（上面接口中取到的soureid作为该接口的id）
-  satinCommentApi
-  
+  satinCommentApi,
+// 美图获取接口
+  meituApi,
+// 新闻接口
+  newsAPi
 }

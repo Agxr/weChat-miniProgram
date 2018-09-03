@@ -1,6 +1,6 @@
 <!-- index:hotCommon -->
 <template name="hotCommon">
-  <view wx:for="{{hotCommonArr}}" class="complate-hot-commons" wx:key="{{index}}">
+  <view wx:for="{{hotCommonArr}}" class="complate-hot-commons" wx:key="{{index}}" catchtap="goCommonDetail" data-soureid="{{item.soureid}}" data-img="{{item.thumbnail}}" data-video="{{item.video}}">
     <view class="user-box flex-between">
       <view class="user-info flex-box">
         <image src="{{item.header}}"></image>
@@ -8,13 +8,39 @@
       </view>
       <view class="top-date">{{item.passtime}}</view>
     </view>
-    <view class="common-cont" catchtap="goCommonDetail">
+    <view class="common-cont">
       <view wx:if="item.text" class="common-text">
-        <text>{{item.text}}</text>
+        <text selectable="true">{{item.text}}</text>
       </view>
-      <view wx:if="item.thumbnail" class="common-img" mode="aspectFit">
+      <view wx:if="item.thumbnail" class="common-img" mode="aspectFit" catchtap='seeBigImg' data-src="{{item.thumbnail}}">
         <image src="{{item.thumbnail}}"></image>
       </view>
+    </view>
+  </view>
+</template>
+<!-- like:hotMeitu -->
+<template name="likeMeitu">
+  <view wx:for="{{hotMeituArr}}" wx:key="{{index}}" class="like-meitu-item flex-column-box">
+    <image src="{{item.url}}" catchtap="likeSeeDetail" data-src="{{item.url}}"></image>
+    <text>上传时间：{{item.createdAt}}</text>
+  </view>
+</template>
+<!-- my:newsCont -->
+<template name="newsCont" >
+  <!-- <view>{{selTabIndex}}</view> -->
+  <view class="news-item" wx:for="{{newsArrSel}}" wx:key="{{index}}" wx:if="{{item.docid}}" catchtap="seeNewsDetail" data-link="{{item.link}}">
+    <view class="news-item-top">
+      <text class="news-title">标题：{{item.title}}</text>
+    </view>
+    <view class="news-item-cont">
+      <text class="news-digest" wx:if="{{item.digest}}">内容：{{item.digest}}</text>
+      <view wx:if="{{item.picInfo.length}}" class="news-pic">
+        <image src="{{item.picInfo[0].url}}" catchtap="seeImgDetail" data-src="{{item.picInfo[0].url}}" class="news-cont-img"></image>
+      </view>
+    </view>
+    <view class="news-item-bottom flex-between">
+      <text class="news-source">来源：{{item.source ? item.source : '新闻'}}</text>
+      <text class="news-time">{{item.ptime}}</text>
     </view>
   </view>
 </template>

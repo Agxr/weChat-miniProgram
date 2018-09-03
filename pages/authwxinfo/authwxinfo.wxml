@@ -1,6 +1,6 @@
 <view class="box">
   <view class="welcome-box">
-    <image class="welcome-img" src="http://i68.tinypic.com/2v0zc7q.jpg" ></image>
+    <image class="welcome-img" src="/images/welcome.jpg" mode="widthFix"></image>
   </view>
   <view class="btn-box flex-around">
     <button bindtap="goBackEvn" size='26'> 返回首页 </button>

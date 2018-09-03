@@ -15,6 +15,9 @@ App({
         console.log(res);
         // wx.request({
         //   url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx7a556909ccb2818e&secret=SECRET&js_code=JSCODE&grant_type=authorization_code',
+        //   data: {
+        //     code: res.code
+        //   },
         //   success: function (res) {
         //     console.log(res)
         //   }

@@ -1,0 +1,6 @@
+/* cd-video */
+.cd-video, .cd-video-detail {
+  width: 100%;
+  height: 380rpx;
+}
+

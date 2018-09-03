@@ -1,0 +1,5 @@
+<view class="box">
+  <view class="cd-video" wx:if="{{sourceVideo}}">
+    <video src="{{sourceVideo}}" class="cd-video-detail"></video>
+  </view>
+</view>

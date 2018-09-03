@@ -25,11 +25,11 @@
   position: fixed;
   bottom: 60rpx;
   right: 40rpx;
-  width: 92rpx;
+  width: 112rpx;
 }
 .userinfo-img {
-  width: 80rpx;
-  height: 80rpx;
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 50%;
   border: 6rpx solid rgba(54, 3, 124, 0.4);
 }

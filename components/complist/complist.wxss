@@ -23,9 +23,55 @@
 .common-cont {
   width: 100%;
 }
+.common-text{
+  margin-bottom: 10rpx;
+}
 .common-text text {
   font-size: 32rpx;
 }
 .common-img image {
   width: 100%;
+}
+/*********** like:hotMeitu *******/
+.like-meitu-item {
+  width: 48%;
+  height: 484rpx;
+}
+.like-meitu-item image {
+  width: 100%;
+  height: 420rpx;
+}
+.like-meitu-item text {
+  font-size: 24rpx;
+  color: #666;
+  align-self: flex-start;
+  margin-top: 10rpx;
+}
+/********* my:newsCont *******/
+.news-item {
+  padding: 10rpx 20rpx;
+  border: 1px solid #ccc;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+}
+.news-title {
+  font-size: 32rpx;
+}
+.news-digest {
+  font-size: 28rpx;
+  color: #666;
+}
+.news-pic {
+  margin-top: 10rpx;
+  text-align: center;
+}
+.news-cont-img {
+  height: 300rpx;
+}
+.news-item-bottom {
+  height: 60rpx; 
+}
+.news-source, .news-time {
+  font-size: 24rpx;
+  color: #666;
 }

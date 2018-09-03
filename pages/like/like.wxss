@@ -1,0 +1,45 @@
+.like-title {
+  padding: 10rpx 0;
+  font-size: 28rpx;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+}
+.like-title::after {
+  position: absolute;
+  top: 28rpx;
+  left: 30%;
+  width: 80rpx;
+  height: 4rpx;
+  background-color: #36037C;
+  content: "";
+}
+.like-title::before {
+  position: absolute;
+  top: 28rpx;
+  right: 30%;
+  width: 80rpx;
+  height: 4rpx;
+  background-color: #36037C;
+  content: "";
+}
+/* like-cont：主内容区 */
+@import "../../components/complist/complist.wxss";
+.like-cont {
+  padding: 10rpx 20rpx 20rpx;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+/* like-auth：未授权显示授权按钮 */
+.like-auth {
+  padding: 0 20rpx 20rpx;
+}
+.like-auth image {
+  width: 100%;
+}
+.like-auth button {
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+}
