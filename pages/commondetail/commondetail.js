@@ -7,6 +7,8 @@ Page({
     sourceId: 0, // 从首页跳过来时带的参数，评论的来源id
     sourceImg: null,
     sourceVideo: null,
+    cdObj: null,
+    hasCdDataFlag: false,
     pageIndex: 1
   },
   /**
@@ -50,6 +52,44 @@ Page({
   },
   // 事件处理函数
   getCommonDetail: function (index) {
+    let that = this;
     let newIndex = index ? index : 1;
+    let data = {
+      id: that.data.sourceId,
+      page: newIndex
+    };
+    wx.showLoading({ // 显示loading图
+      title: 'Loading...',
+      mask: true
+    })
+    api.satinCommentApi({
+      data,
+      success: function (res) {
+        // console.log(res.data.data)
+        that.getCleanData(res.data.data)
+      },
+      fail: function (err) {
+        console.log(err)
+        wx.showToast({
+          title: '加载失败，请稍后重试',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
+  },
+  getCleanData: function (obj) { // 整理数据
+    console.log(obj)
+    if (obj.hot.list.length == 0 && obj.normal.list.length == 0) {
+      this.setData({
+        hasCdDataFlag: true
+      })
+    }
+
+
+    this.setData({
+      cdObj: obj
+    })
+    wx.hideLoading();
   }
 })

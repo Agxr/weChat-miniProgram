@@ -62,7 +62,7 @@ Page({
   getNewsFun: function () { // 获取新闻数据
     let that = this;
     wx.showLoading({ // 显示loading图
-      title: '努力加载中...',
+      title: 'Loading...',
       mask: true
     })
     api.newsAPi({

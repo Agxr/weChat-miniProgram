@@ -75,3 +75,13 @@
   font-size: 24rpx;
   color: #666;
 }
+/********* commondetail ***********/
+.cd-up-box {
+  padding: 10rpx 20rpx;
+  border: 1px solid #dbdbdb;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+.cd-up-text text {
+  font-size: 32rpx;
+}

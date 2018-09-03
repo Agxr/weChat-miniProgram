@@ -2,4 +2,18 @@
   <view class="cd-video" wx:if="{{sourceVideo}}">
     <video src="{{sourceVideo}}" class="cd-video-detail"></video>
   </view>
+  <!-- cd-cont -->
+  <view class="cd-cont" wx:if="{{!hasCdDataFlag}}">
+    <view class="cd-up-div">
+      <view class="cd-up-title">热门评论</view>
+      <view>
+        <import src="../../components/complist/complist.wxml" />
+        <template is="cdUpCommon" data="{{cdObj}}"></template>
+      </view>
+    </view>
+  </view>
+  <!-- 无数据时缺省页 -->
+  <view class="cd-none" wx:else>
+    <text class="cd-none-text">暂无评论详情消息</text>
+  </view>
 </view>

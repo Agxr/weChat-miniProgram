@@ -79,7 +79,7 @@ Page({
       'page': newIndex
     };
     wx.showLoading({ // 显示loading图
-      title: '努力加载中...',
+      title: 'Loading...',
       mask: true
     })
     api.meituApi({

@@ -44,3 +44,23 @@
     </view>
   </view>
 </template>
+<!-- commondetail:common -->
+<template name="cdUpCommon">
+  <view class="cd-up-box" wx:for="{{cdObj.hot.list}}" wx:key="{{index}}">
+    <view class="user-box flex-between">
+      <view class="user-info flex-box">
+        <image src="{{item.user.profile_image}}"></image>
+        <text>{{item.user.username}}</text>
+      </view>
+      <view class="top-date">{{item.ctime}}</view>
+    </view>
+    <view class="cd-up-cont">
+      <view wx:if="item.content" class="cd-up-text">
+        <text selectable="true">{{item.content}}</text>
+      </view>
+      <!-- <view wx:if="item.thumbnail" class="common-img" mode="aspectFit" catchtap='seeBigImg' data-src="{{item.thumbnail}}">
+        <image src="{{item.thumbnail}}"></image>
+      </view> -->
+    </view>
+  </view>
+</template>
