@@ -41,13 +41,16 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function (ops) {
+    let sourceid = this.data.sourceId;
+    let sourcevideo = this.data.sourceVideo;
+    let sourceimg = this.data.sourceImg;
     if (ops.from === 'button') {
       // 来自页面内转发按钮
       console.log(ops.target)
     }
     return {
       title: '林下夕影',
-      path: 'pages/commondetail/commondetail'
+      path: 'pages/commondetail/commondetail?sourceid=' + sourceid + '&video=' + sourcevideo + '&img=' + sourceimg
     }
   },
   // 事件处理函数
