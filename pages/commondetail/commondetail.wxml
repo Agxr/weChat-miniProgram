@@ -5,10 +5,16 @@
   <!-- cd-cont -->
   <view class="cd-cont" wx:if="{{!hasCdDataFlag}}">
     <view class="cd-up-div">
-      <view class="cd-up-title">热门评论</view>
-      <view>
+      <view class="cd-up-tab flex-around">
+        <text catchtap="selTabItem" data-id="0" class="cd-up-tabitem {{curTabIndex == 0 ? 'cd-up-tabitem-on' : ''}}">热门评论</text>
+        <text catchtap="selTabItem" data-id="1" class="cd-up-tabitem {{curTabIndex == 1 ? 'cd-up-tabitem-on' : ''}}">网友众评</text>
+      </view>
+      <view class="cd-up-cont">
         <import src="../../components/complist/complist.wxml" />
-        <template is="cdUpCommon" data="{{cdObj}}"></template>
+        <template is="cdUpCommon" data="{{cdObj, curTabIndex}}"></template>
+        <view class="common-hot-none" wx:if="{{cdObjOnceDataFlag}}">
+          <text class="cd-none-text">暂无评论消息</text>
+        </view>
       </view>
     </view>
   </view>

@@ -46,7 +46,7 @@
 </template>
 <!-- commondetail:common -->
 <template name="cdUpCommon">
-  <view class="cd-up-box" wx:for="{{cdObj.hot.list}}" wx:key="{{index}}">
+  <view class="cd-up-box" wx:for="{{curTabIndex == 0 ? cdObj.hot.list : cdObj.normal.list}}" wx:key="{{index}}">
     <view class="user-box flex-between">
       <view class="user-info flex-box">
         <image src="{{item.user.profile_image}}"></image>
